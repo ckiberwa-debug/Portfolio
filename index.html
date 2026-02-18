@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiberwa Caroline | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    line-height: 1.7;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: #111827;
+    padding: 15px 0;
+    text-align: right;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+section {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+/* Hero / Home Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 140px;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.hero img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #38bdf8;
+}
+
+.github-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.github-btn:hover {
+    background: white;
+}
+
+/* About Me */
+.about p {
+    margin-bottom: 15px;
+}
+
+/* Skills / Code Competences */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.skill-card {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    background: #334155;
+}
+
+/* Projects */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: #334155;
+}
+
+.tags span {
+    background: #38bdf8;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+/* Hobbies */
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.music-player {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.player-bar {
+    height: 6px;
+    background: #334155;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.player-progress {
+    width: 65%;
+    height: 100%;
+    background: #38bdf8;
+}
+
+/* Contact */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 100px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: white;
+}
+
+@media(max-width: 768px){
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#hobbies">What I Love To Do</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/ckiberwa-debug" target="_blank">Resume</a>
+</nav>
+
+<!-- Home / Hero -->
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h1>Hello, I'm Caroline</h1>
+        <p>
+        I'm an aspiring full-stack developer with a strong enthusiasm for building interactive web applications and seamless user experiences.
+        Experienced in HTML, CSS, Python, and currently advancing in JavaScript, Git, and modern frameworks like React and Tailwind CSS.
+        I'm passionate about turning ideas into functional, visually appealing solutions while continuously learning and expanding my skill set.
+        </p>
+        <a href="https://github.com/ckiberwa-debug" target="_blank" class="github-btn">View My GitHub</a>
+    </div>
+    <img src="profile.jpg" alt="Caroline Profile Picture">
+</section>
+
+<!-- About Me -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+        Transitioning from a background in tech operations and billing support, I bring a disciplined and structured approach to software development.
+        I enjoy solving problems, building interactive user interfaces, and turning ideas into tangible products. 
+    </p>
+    <p>
+        My journey into development has been driven by curiosity, resilience, and a desire to grow professionally while continuously learning new technologies.
+        I value creativity, consistency, and impactful work that makes a difference.
+    </p>
+</section>
+
+<!-- Skills / Code Competences -->
+<section id="skills">
+    <h2>Code Competences</h2>
+    <div class="skills">
+        <div class="skill-card"><strong>HTML</strong> – Semantic, accessible web pages</div>
+        <div class="skill-card"><strong>CSS</strong> – Responsive layouts, Flexbox, Grid, Tailwind CSS</div>
+        <div class="skill-card"><strong>Python</strong> – Data handling, scripts, automation</div>
+        <div class="skill-card"><strong>JavaScript</strong> – Interactive UI, DOM manipulation</div>
+        <div class="skill-card"><strong>React</strong> – Component-based frontend apps</div>
+        <div class="skill-card"><strong>Git</strong> – Version control and collaboration</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <h3>Personal Portfolio Website</h3>
+            <p>Fully responsive developer portfolio built with HTML & CSS, showcasing skills and projects.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+        </div>
+        <div class="project-card">
+            <h3>Invoice Data Tracker</h3>
+            <p>Billing management tool for tracking invoice corrections and payments efficiently.</p>
+            <div class="tags"><span>Python</span><span>Excel</span></div>
+        </div>
+        <div class="project-card">
+            <h3>Landing Page Design</h3>
+            <p>Modern responsive landing page layout inspired by professional portfolios.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+        </div>
+        <div class="project-card">
+            <h3>Task Management Concept App</h3>
+            <p>Designed structure for a productivity tracking web application to manage tasks efficiently.</p>
+            <div class="tags"><span>JavaScript</span><span>UI/UX</span></div>
+        </div>
+        <div class="project-card">
+            <h3>Responsive Blog Layout</h3>
+            <p>Multi-section blog layout focusing on readability, structure, and modern design principles.</p>
+            <div class="tags"><span>HTML</span><span>CSS Grid</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- Hobbies / What I Love To Do -->
+<section id="hobbies">
+    <h2>What I Love To Do</h2>
+    <div class="hobbies">
+        <div class="music-player">
+            <h3>🎧 Listening to Music</h3>
+            <p>Music helps me focus, think creatively, and recharge.</p>
+            <div class="player-bar">
+                <div class="player-progress"></div>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>✈️ Traveling</h3>
+            <p>Exploring new places and cultures expands my perspective.</p>
+        </div>
+        <div class="project-card">
+            <h3>📚 Reading</h3>
+            <p>Reading strengthens critical thinking and creativity.</p>
+        </div>
+        <div class="project-card">
+            <h3>💡 Learning New Skills</h3>
+            <p>Continuously exploring new technologies and personal growth opportunities.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+    <h2>Education</h2>
+    <div class="project-card">
+        <h3>African Leadership University (ALU)</h3>
+        <p><strong>BSc in Software Engineering</strong></p>
+        <p>2025 – Present</p>
+        <p>Focused on software development principles, web technologies, system design, and practical project implementation.</p>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Email: ckiberwa@gmail.com</p>
+            <p>Phone: +250786567499</p>
+            <p>Location: Kigali, Rwanda</p>
+            <p>GitHub: <a href="https://github.com/ckiberwa-debug" target="_blank">ckiberwa-debug</a></p>
+        </div>
+        <div>
+            <h3>Send a Message</h3>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea rows="5" placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
