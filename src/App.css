@@ -1,0 +1,276 @@
+/* ---------------- General ---------------- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 1100px;
+  margin: auto;
+  padding: 25px;
+}
+
+/* ---------------- About Me ---------------- */
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(135deg, #ffe0b2, #ffcc80);
+  padding: 35px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-me.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.profile-container {
+  text-align: center;
+  flex: 0 0 250px;
+}
+
+.profile-pic-large {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-pic-large:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.full-name {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.intro-text-expanded {
+  flex: 1 1 500px;
+}
+
+.intro-text-expanded h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #444;
+}
+
+.intro-text-expanded p {
+  margin-top: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ---------------- Skills ---------------- */
+.skills-section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.skills-section.slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-section h2 {
+  color: #ff9800;
+  margin-bottom: 15px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: default;
+  color: #fff;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Featured top skills slightly bigger */
+.featured-skill {
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Tech Skills - Blue */
+.skill-badge.tech {
+  background-color: #4dabf7;
+}
+
+.skill-badge.tech:hover {
+  background-color: #1971c2;
+  transform: scale(1.1);
+}
+
+/* Soft Skills - Orange */
+.skill-badge.soft {
+  background-color: #ffa94d;
+}
+
+.skill-badge.soft:hover {
+  background-color: #f76707;
+  transform: scale(1.1);
+}
+
+/* ---------------- Projects ---------------- */
+.projects-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.projects-section.slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects-section h2 {
+  color: #4dabf7;
+  margin-bottom: 15px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Featured project larger shadow */
+.featured-project {
+  border: 2px solid #4dabf7;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.project-card {
+  background-color: #fff8e1;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #ff9800;
+}
+
+.project-card .tools {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* ---------------- Contact ---------------- */
+.contact-section-expanded {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.contact-form, .contact-info {
+  flex: 1 1 400px;
+}
+
+.contact-form h2, .contact-info h2 {
+  margin-bottom: 15px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #4dabf7;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: #1971c2;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #ffcc80, #ffe0b2);
+  padding: 15px 20px;
+  border-radius: 12px;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card a {
+  color: #333;
+  text-decoration: underline;
+}
+
+/* ---------------- Scroll Animations ---------------- */
+.hidden-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade-in-up {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease;
+}
